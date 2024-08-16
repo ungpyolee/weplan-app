@@ -24,9 +24,6 @@ jobs:
             - name: Build project
               run: npm run build
 
-            - name: Package application
-              run: zip -r deploy.zip . -x "node_modules/*" ".*" "__tests__/*"
-
             - name: Install Elastic Beanstalk CLI
               run: |
                   python -m pip install --upgrade pip
@@ -38,15 +35,6 @@ jobs:
                   aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
                   aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
                   aws-region: ${{ secrets.AWS_REGION }}
-
-            - name: Upload to S3
-              run: |
-                  aws s3 cp deploy.zip s3://elasticbeanstalk-${{ secrets.AWS_REGION }}-${{ github.repository }}-${{ github.sha }}/deploy.zip --region ${{ secrets.AWS_REGION }}
-
-            - name: Create and Deploy Application Version
-              run: |
-                  aws elasticbeanstalk create-application-version --application-name ${{ secrets.EB_APPLICATION_NAME }} --version-label ${{ github.sha }} --source-bundle S3Bucket=elasticbeanstalk-${{ secrets.AWS_REGION }}-${{ github.repository }}-${{ github.sha }},Key=deploy.zip --region ${{ secrets.AWS_REGION }}
-                  aws elasticbeanstalk update-environment --application-name ${{ secrets.EB_APPLICATION_NAME }} --environment-name ${{ secrets.EB_ENVIRONMENT_NAME }} --version-label ${{ github.sha }} --region ${{ secrets.AWS_REGION }}
 
             - name: Deploy using EB CLI
               run: |
