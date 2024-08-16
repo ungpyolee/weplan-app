@@ -30,6 +30,8 @@ export default [
         rules: {
             'prettier/prettier': 'error',
             // 추가적인 ESLint 규칙을 여기에 작성 가능
+            'no-console': 'off',
+            'no-unused-vars': 'warn',
         },
     },
 ];
