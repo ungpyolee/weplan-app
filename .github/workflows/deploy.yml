@@ -36,6 +36,9 @@
 
 #             - name: Deploy to Elastic Beanstalk
 #               run: eb deploy
+
+# name: Deploy to Elastic Beanstalk
+
 name: Deploy to Elastic Beanstalk
 
 on:
