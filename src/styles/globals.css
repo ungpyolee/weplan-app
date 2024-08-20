@@ -4,14 +4,14 @@
 
 @font-face {
     font-family: 'Pretendard';
-    src: url('/fonts/PretendardVariable.woff2') format('woff2');
+    src: url('/assets/fonts/PretendardVariable.woff2') format('woff2');
     font-weight: 100 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Edu';
-    src: url('/fonts/EduAUVICWANTHand-VariableFont_wght.ttf') format('ttf');
+    src: url('/assets/fonts/EduAUVICWANTHand-VariableFont_wght.ttf') format('ttf');
     font-weight: 400 700;
     font-style: normal;
 }
@@ -31,7 +31,8 @@
 body {
     color: rgb(var(--foreground-rgb));
     background: var(--background);
-    @apply max-w-[600px] mx-auto h-screen box-border;
+
+    @apply max-w-[600px] mx-auto min-h-screen box-border relative outline outline-gray-800;
 }
 
 @layer utilities {
