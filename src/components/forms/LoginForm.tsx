@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import AuthInput from '../common/Input/AuthInput';
+import { Input } from '../common/Input';
 
 const LoginForm = () => {
     const [email, setEmail] = useState<string>('');
@@ -16,8 +16,8 @@ const LoginForm = () => {
     };
     return (
         <form className="flex flex-col px-5">
-            <AuthInput type="email" value={email} onChange={handleEmailChange} placeholder="이메일" />
-            <AuthInput type="paswword" value={password} onChange={handlePasswordChange} placeholder="비밀번호" />
+            <Input type="email" value={email} onChange={handleEmailChange} placeholder="이메일" size="lg" />
+            <Input type="paswword" value={password} onChange={handlePasswordChange} placeholder="비밀번호" size="lg" />
         </form>
     );
 };
