@@ -8,7 +8,7 @@ interface InputProps {
     size?: 'sm' | 'default' | 'lg';
 }
 
-const Input = ({ value, onChange, placeholder, type, size = 'default' }: InputProps) => {
+const Input = ({ value, onChange, placeholder, type, size = 'default', ...props }: InputProps) => {
     const sizeClasses = {
         sm: 'h-10',
         default: 'h-12',
@@ -22,7 +22,7 @@ const Input = ({ value, onChange, placeholder, type, size = 'default' }: InputPr
             onChange={onChange}
             placeholder={placeholder || '내용을 입력해주세요'}
             required
-            className={`w-full rounded-xl border border-gray-500 px-5 bg-transparent hover:border-white focus:border-primary focus:outline-none transition ${sizeClasses[size]}`}
+            className={`w-full rounded-xl border border-gray-500 px-5 bg-transparent hover:border-white focus:border-primary focus:outline-none transition ${sizeClasses[size]} {}...props}`}
         />
     );
 };
