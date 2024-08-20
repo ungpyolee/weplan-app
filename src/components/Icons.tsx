@@ -1,4 +1,6 @@
 import LogoWeplan from '../assets/icons/logo-weplan.svg';
+import LogoKakao from '../assets/icons/logo-kakao.svg';
+import LogoNaver from '../assets/icons/logo-naver.svg';
 import IconLikeL from '../assets/icons/icon-like-l.svg';
 import IconLike from '../assets/icons/icon-like.svg';
 import IconAddL from '../assets/icons/icon-add-l.svg';
@@ -17,6 +19,8 @@ import IconsettingL from '../assets/icons/icon-setting-l.svg';
 
 export {
     LogoWeplan,
+    LogoKakao,
+    LogoNaver,
     IconAddL,
     IconAddLB,
     IconBookmark,

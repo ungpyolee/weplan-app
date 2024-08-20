@@ -44,7 +44,7 @@ export default {
                 },
                 primary: {
                     DEFAULT: '#5A54F1',
-                    light: '#837FF5',
+                    light: '#726EF3',
                     dark: '#4642B8',
                 },
                 literal: {
