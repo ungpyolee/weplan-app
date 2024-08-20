@@ -3,6 +3,9 @@
 ### 프로젝트 제목
 **WEPLAN :: 일정을 관리하고 공유하는 웹앱 서비스**
 
+### 배포 주소
+[WEPLAN](https://weplan-app.vercel.app/)
+
 ### 개발 기간
 24.08.06 ~ 24.09.09
 24.08.06 ~ 24.08.14 아이디어 구상, 프로젝트 착수, 기획, 와이어 프레임, 요구사항정의서, 화면정의서, UI디자인
@@ -43,12 +46,12 @@
 | **Rename:** | 파일 혹은 폴더명 수정 또는 이동    |
 | **Remove:** | 파일 또는 코드 제거                |
 
-## Pull Request(PR) Convention
+### Pull Request(PR) Convention
 
 - 제목은 '[#기능 번호] 변경 사항' 구조로 작성할 것
 - Issue와 연동할 것
 
-## Issue Convention
+### Issue Convention
 
 - 담당자(Assignees)를 명시 할 것
 - Task list 기능을 적극 활용할 것
