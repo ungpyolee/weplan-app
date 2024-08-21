@@ -6,6 +6,11 @@
 ### 배포 주소
 [WEPLAN](https://weplan-app.vercel.app/)
 
+### 기획 자료
+[UI Design, Functional Specification, User Flow](https://www.figma.com/design/LQSqRwpkEznYwZSCfyJwDt/Project-%3A-Weplan?node-id=76-447&t=Io8ASP9JLMVyeoKg-1)
+[Software Requirements Specification](https://docs.google.com/spreadsheets/d/1QzESnZfdiZi2VL4d6G2xp7sTLpOTmSX1z9yiYntms6Y/edit?usp=sharing)
+
+
 ### 개발 기간
 24.08.06 ~ 24.09.09
 24.08.06 ~ 24.08.14 아이디어 구상, 프로젝트 착수, 기획, 와이어 프레임, 요구사항정의서, 화면정의서, UI디자인
