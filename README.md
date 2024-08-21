@@ -7,8 +7,8 @@
 [WEPLAN](https://weplan-app.vercel.app/)
 
 ### 기획 자료
-[UI Design, Functional Specification, User Flow](https://www.figma.com/design/LQSqRwpkEznYwZSCfyJwDt/Project-%3A-Weplan?node-id=76-447&t=Io8ASP9JLMVyeoKg-1)
-[Software Requirements Specification](https://docs.google.com/spreadsheets/d/1QzESnZfdiZi2VL4d6G2xp7sTLpOTmSX1z9yiYntms6Y/edit?usp=sharing)
+![UI Design, Functional Specification, User Flow](https://www.figma.com/design/LQSqRwpkEznYwZSCfyJwDt/Project-%3A-Weplan?node-id=76-447&t=Io8ASP9JLMVyeoKg-1)
+![Software Requirements Specification](https://docs.google.com/spreadsheets/d/1QzESnZfdiZi2VL4d6G2xp7sTLpOTmSX1z9yiYntms6Y/edit?usp=sharing)
 
 
 ### 개발 기간
