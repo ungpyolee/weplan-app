@@ -1,14 +1,41 @@
-import { LogoWeplan } from '@/components/Icons';
+import { IconArrow, LogoWeplan } from '@/components/Icons';
+import SnapPlanCard from '@/components/home/SnapPlanCard';
+import SnapUserCard from '@/components/home/SnapUserCard';
+import Link from 'next/link';
 
 export default function Home() {
     return (
         <>
             <div className="flex flex-col text-center">
-                <LogoWeplan height="24" className="fill-primary mt-10 mb-2" />
-                <p className="text-lg">
-                    반갑습니다. 일정을 관리하고 공유하는 서비스 <span className="font-semibold">위플랜</span>입니다.
-                </p>
+                <div className="px-5 pt-10 mb-8">
+                    <LogoWeplan height="24" className="fill-primary mb-2" />
+                </div>
+                <div className="px-5 mb-8">
+                    <div className="flex  justify-between">
+                        <p>지금 뜨는 위플랜</p>
+                        <Link href="#" className="flex items-center">
+                            전체보기
+                            <div className="w-3 h-3 flex justify-center items-center rotate-[270deg] ml-2">
+                                <IconArrow className="fill-white" />
+                            </div>
+                        </Link>
+                    </div>
+                    <SnapPlanCard />
+                </div>
+                <div className="px-5 mb-8">
+                    <div className="flex  justify-between">
+                        <p>믿고 보는 위플래너</p>
+                        <Link href="#" className="flex items-center">
+                            전체보기
+                            <div className="w-3 h-3 flex justify-center items-center rotate-[270deg] ml-2">
+                                <IconArrow className="fill-white" />
+                            </div>
+                        </Link>
+                    </div>
+                    <SnapUserCard />
+                </div>
             </div>
+            <Link href="auth/login">로그인</Link>
         </>
     );
 }
