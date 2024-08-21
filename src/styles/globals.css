@@ -40,3 +40,7 @@ body {
         text-wrap: balance;
     }
 }
+
+.h-13 {
+    height: 52px;
+}

@@ -9,7 +9,7 @@ interface SubmitProps {
 const Submit = ({ value, className, size = 'default' }: SubmitProps) => {
     const sizeClasses = {
         sm: 'h-10',
-        default: 'h-12',
+        default: 'h-13',
         lg: 'h-14',
     };
     return (

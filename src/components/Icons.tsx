@@ -16,6 +16,7 @@ import IconMypageLB from '../assets/icons/icon-mypage-l-b.svg';
 import IconSearchL from '../assets/icons/icon-search-l.svg';
 import IconSearchLB from '../assets/icons/icon-search-l-b.svg';
 import IconsettingL from '../assets/icons/icon-setting-l.svg';
+import IconLeftArrow from '../assets/icons/icon-leftarrow.svg';
 
 export {
     LogoWeplan,
@@ -36,4 +37,5 @@ export {
     IconSearchL,
     IconSearchLB,
     IconsettingL,
+    IconLeftArrow,
 };

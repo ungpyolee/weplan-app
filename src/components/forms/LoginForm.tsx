@@ -18,7 +18,7 @@ const LoginForm = () => {
             <Input type="email" value={email} onChange={handleEmailChange} placeholder="이메일" />
             <Input type="paswword" value={password} onChange={handlePasswordChange} placeholder="비밀번호" />
             <CheckBox label="아이디 저장" />
-            <Submit className="mt-2" value="로그인" size="default" />
+            <Submit className="mt-2" value="로그인" />
         </form>
     );
 };
