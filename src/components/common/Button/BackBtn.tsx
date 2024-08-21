@@ -1,6 +1,6 @@
 'use client';
 
-import { IconLeftArrow } from '@/components/Icons';
+import { IconTailArrow } from '@/components/Icons';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
@@ -17,7 +17,7 @@ const BackBtn = () => {
             onClick={handleBack}
         >
             <div className="w-5 h-5 flex items-center justify-center">
-                <IconLeftArrow className="fill-white" />
+                <IconTailArrow className="fill-white" />
             </div>
         </button>
     );

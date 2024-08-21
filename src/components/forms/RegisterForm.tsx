@@ -30,7 +30,7 @@ const RegisterForm = () => {
                 onChange={handleChangePasswordConfirm}
                 placeholder="비밀번호 확인"
             />
-            <CheckBox label="아이디 저장" />
+            <CheckBox label="개인정보 약관동의" />
 
             <Submit className="mt-2" value="회원가입" />
         </form>
