@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useId } from 'react';
 
 interface CheckBoxProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label?: string;
 }
 
 const CheckBox = ({ label, ...props }: CheckBoxProps) => {
+    const id = useId();
+
     return (
         <label className="flex items-center cursor-pointer">
             <div className="relative flex items-center">

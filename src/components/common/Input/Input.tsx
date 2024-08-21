@@ -11,7 +11,7 @@ interface InputProps {
 const Input = ({ value, onChange, placeholder, type, size = 'default', ...props }: InputProps) => {
     const sizeClasses = {
         sm: 'h-10',
-        default: 'h-12',
+        default: 'h-13',
         lg: 'h-14',
     };
 

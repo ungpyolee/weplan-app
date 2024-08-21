@@ -38,7 +38,7 @@ const BottomNavBar = () => {
                         className="w-12 h-12 flex justify-center items-center hover:bg-gray-800 transition rounded-xl"
                     >
                         <div className="flex justify-center items-center">
-                            <div className="w-[22px] h-[22px] flex items-center justify-center">
+                            <div className="w-5 h-5 flex items-center justify-center">
                                 {pathname === path ? <ActiveIcon /> : <Icon />}
                             </div>
                         </div>
