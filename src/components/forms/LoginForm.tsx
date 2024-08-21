@@ -1,10 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Input } from '../common/Input';
-import Radio from '../common/Input/Radio';
-import CheckBox from '../common/Input/CheckBox';
-import Submit from '../common/Input/Submit';
+import { Input, CheckBox, Submit } from '../common/Input';
 const LoginForm = () => {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
@@ -18,10 +15,10 @@ const LoginForm = () => {
     };
     return (
         <form className="flex flex-col px-5 gap-4">
-            <Input type="email" value={email} onChange={handleEmailChange} placeholder="이메일" size="lg" />
-            <Input type="paswword" value={password} onChange={handlePasswordChange} placeholder="비밀번호" size="lg" />
+            <Input type="email" value={email} onChange={handleEmailChange} placeholder="이메일" />
+            <Input type="paswword" value={password} onChange={handlePasswordChange} placeholder="비밀번호" />
             <CheckBox label="아이디 저장" />
-            <Submit className="mt-2" value="로그인" />
+            <Submit className="mt-2" value="로그인" size="default" />
         </form>
     );
 };
