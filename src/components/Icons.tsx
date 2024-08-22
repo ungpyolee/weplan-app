@@ -18,6 +18,8 @@ import IconSearchLB from '../assets/icons/icon-search-l-b.svg';
 import IconsettingL from '../assets/icons/icon-setting-l.svg';
 import IconTailArrow from '../assets/icons/icon-tailarrow.svg';
 import IconArrow from '../assets/icons/icon-arrow.svg';
+import IconPlus from '../assets/icons/icon-plus.svg';
+import IconCheck from '../assets/icons/icon-check.svg';
 
 export {
     LogoWeplan,
@@ -40,4 +42,6 @@ export {
     IconsettingL,
     IconTailArrow,
     IconArrow,
+    IconPlus,
+    IconCheck,
 };

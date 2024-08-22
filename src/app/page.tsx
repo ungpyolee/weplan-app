@@ -34,8 +34,8 @@ export default function Home() {
                     </div>
                     <SnapUserCard />
                 </div>
+                <Link href="auth/login">로그인</Link>
             </div>
-            <Link href="auth/login">로그인</Link>
         </>
     );
 }
