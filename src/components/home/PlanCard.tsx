@@ -1,9 +1,13 @@
 import React from 'react';
 import { IconBookmarkL, IconLikeL } from '../Icons';
+import Link from 'next/link';
 
 const PlanCard = () => {
     return (
-        <div className="snap-start flex-shrink-0 w-80 rounded-xl shadow-md overflow-hidden text-start">
+        <Link
+            href="/posted-plan"
+            className="snap-start flex-shrink-0 w-80 rounded-xl shadow-md overflow-hidden text-start"
+        >
             <div className="flex flex-col justify-end w-80 h-80 bg-primary">
                 <div className="flex px-5 pb-2 pt-5 bg-gradient-to-b from-transparent via-black/40 to-black/80">
                     <span className="me-auto">{'게시자닉네임'}</span>
@@ -30,7 +34,7 @@ const PlanCard = () => {
                     {'경비 250,000원'}
                 </p>
             </div>
-        </div>
+        </Link>
     );
 };
 
