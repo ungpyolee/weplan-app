@@ -8,7 +8,7 @@ const PlanCard = () => {
             href="/posted-plan"
             className="snap-start flex-shrink-0 w-80 rounded-xl shadow-md overflow-hidden text-start"
         >
-            <div className="flex flex-col justify-end w-80 h-80 bg-primary">
+            <div className="flex flex-col justify-end w-80 h-80 bg-gray-700">
                 <div className="flex px-5 pb-2 pt-5 bg-gradient-to-b from-transparent via-black/40 to-black/80">
                     <span className="me-auto">{'게시자닉네임'}</span>
                     <button className="h-5 w-5 me-4 flex justify-center items-center">
@@ -20,7 +20,7 @@ const PlanCard = () => {
                 </div>
             </div>
             <div className="px-5 pt-4 pb-5 bg-gray-800">
-                <div className=" text-sm">
+                <div className="text-sm">
                     좋아요 {'number'}
                     <span className="mx-1">•</span>
                     북마크 {'number'}
