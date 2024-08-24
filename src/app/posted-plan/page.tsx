@@ -7,7 +7,7 @@ import React from 'react';
 
 const PostedPlan = () => {
     return (
-        <div className="pt-10">
+        <div>
             <div className="flex px-5 mb-3">
                 <span>{'게시작성자'}</span>
                 <button className="ml-2 text-sm border px-2 rounded-full flex items-center hover:bg-gray-700 transition">
