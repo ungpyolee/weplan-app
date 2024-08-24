@@ -60,8 +60,8 @@ export default {
                     },
                     gold: {
                         DEFAULT: '#ECD800',
-                        light: '#837FF5',
-                        dark: '#B6A705',
+                        light: '#F6EC80',
+                        dark: '#F6EC80',
                     },
                     green: {
                         DEFAULT: '#24C072',

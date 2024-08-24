@@ -20,6 +20,9 @@ import IconTailArrow from '../assets/icons/icon-tailarrow.svg';
 import IconArrow from '../assets/icons/icon-arrow.svg';
 import IconPlus from '../assets/icons/icon-plus.svg';
 import IconCheck from '../assets/icons/icon-check.svg';
+import IconPin from '../assets/icons/icon-pin.svg';
+import IconCoin from '../assets/icons/icon-coin.svg';
+import IconCall from '../assets/icons/icon-call.svg';
 
 export {
     LogoWeplan,
@@ -44,4 +47,7 @@ export {
     IconArrow,
     IconPlus,
     IconCheck,
+    IconPin,
+    IconCoin,
+    IconCall,
 };

@@ -4,7 +4,7 @@ import { LogoWeplan } from '@/components/Icons';
 import Link from 'next/link';
 const Login = () => {
     return (
-        <div className="flex flex-col justify-center h-screen pb-[68px]">
+        <div className="flex flex-col justify-center h-screen">
             <div className="flex flex-col text-center mb-[100px]">
                 <LogoWeplan height="24" className="fill-primary mt-10 mb-2" />
                 <p className="text-base">
