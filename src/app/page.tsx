@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <>
             <div className="flex flex-col text-center">
-                <div className="px-5 pt-10 mb-8">
+                <div className="px-5 mb-8">
                     <LogoWeplan height="24" className="fill-primary mb-2" />
                 </div>
                 <div className="px-5 mb-8">
