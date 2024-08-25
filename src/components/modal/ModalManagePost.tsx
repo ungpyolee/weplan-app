@@ -36,7 +36,7 @@ const ModalManagePost = () => {
                         onClick={handleClickOutside}
                     >
                         <motion.div
-                            className="w-full bg-gray-900 shadow-sm rounded-t-3xl border-t border-l border-r border-gray-700 pt-7 pb-6 px-5 modal-content"
+                            className="w-full bg-gray-900 shadow-sm rounded-t-3xl pt-7 pb-6 px-5 modal-content"
                             initial="hidden"
                             animate="visible"
                             exit="exit"

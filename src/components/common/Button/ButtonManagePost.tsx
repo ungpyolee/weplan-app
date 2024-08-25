@@ -1,5 +1,3 @@
-'use client';
-
 interface ButtonManagePost {
     onClick: () => void;
 }
@@ -7,10 +5,10 @@ interface ButtonManagePost {
 const ButtonManagePost = ({ onClick }: ButtonManagePost) => {
     return (
         <div>
-            <button onClick={onClick} className="flex gap-1.5 p-2 ms-2">
-                <div className="w-1 h-1 rounded-full bg-white"></div>
-                <div className="w-1 h-1 rounded-full bg-white"></div>
-                <div className="w-1 h-1 rounded-full bg-white"></div>
+            <button onClick={onClick} className="flex gap-1.5 py-2">
+                <div className="w-1 h-1 rounded-full bg-gray-400"></div>
+                <div className="w-1 h-1 rounded-full bg-gray-400"></div>
+                <div className="w-1 h-1 rounded-full bg-gray-400"></div>
             </button>
         </div>
     );

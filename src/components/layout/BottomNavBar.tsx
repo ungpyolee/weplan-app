@@ -32,11 +32,7 @@ const BottomNavBar = () => {
         <nav className="fixed bottom-0 w-full max-w-[600px] bg-gray-900 border-t border-gray-800 pt-2 pb-3 px-3 sm:px-5">
             <div className="w-full mx-auto flex justify-around items-center ">
                 {navItems.map(({ path, Icon, ActiveIcon }) => (
-                    <Link
-                        key={path}
-                        href={path}
-                        className="w-12 h-12 flex justify-center items-center hover:bg-gray-800 transition rounded-xl"
-                    >
+                    <Link key={path} href={path} className="w-12 h-12 flex justify-center items-center">
                         <div className="flex justify-center items-center">
                             <div className="w-5 h-5 flex items-center justify-center">
                                 {pathname === path ? <ActiveIcon /> : <Icon />}

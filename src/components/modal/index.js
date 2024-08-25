@@ -1,3 +1,4 @@
-import { ModalManagePost } from './ModalManagePost';
+import { default as ModalManagePost } from './ModalManagePost';
+import { default as ModalSearchFilter } from './ModalSearchFilter';
 
-export { ModalManagePost };
+export { ModalManagePost, ModalSearchFilter };

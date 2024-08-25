@@ -11,14 +11,14 @@ const PostedPlan = () => {
         <div>
             <div className="flex px-5 mb-3 items-center">
                 <BackBtn />
-                <span className="ms-2">{'게시작성자'}</span>
+                <span className="ms-4">{'게시작성자'}</span>
                 <button className="ml-2 text-sm border px-2 rounded-full flex items-center hover:bg-gray-700 transition">
                     <div className="h-2 w-2 me-1">
                         <IconPlus className="fill-white" />
                     </div>
                     팔로우
                 </button>
-                <span className="text-gray-400 ml-auto">{'조회 000'}</span>
+                <span className="text-gray-400 ml-auto me-4">{'조회 000'}</span>
                 <ModalManagePost />
             </div>
             <ImageCard />
