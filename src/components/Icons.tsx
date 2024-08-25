@@ -23,6 +23,7 @@ import IconCheck from '../assets/icons/icon-check.svg';
 import IconPin from '../assets/icons/icon-pin.svg';
 import IconCoin from '../assets/icons/icon-coin.svg';
 import IconCall from '../assets/icons/icon-call.svg';
+import IconClose from '../assets/icons/icon-close.svg';
 
 export {
     LogoWeplan,
@@ -50,4 +51,5 @@ export {
     IconPin,
     IconCoin,
     IconCall,
+    IconClose,
 };
