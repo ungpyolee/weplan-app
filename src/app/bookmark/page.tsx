@@ -1,7 +1,12 @@
+import { NavBottom } from '@/components/layout';
 import React from 'react';
 
 const bookmark = () => {
-    return <div>bookmark</div>;
+    return (
+        <>
+            <NavBottom />
+        </>
+    );
 };
 
 export default bookmark;

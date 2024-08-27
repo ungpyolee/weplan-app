@@ -24,7 +24,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --foreground-rgb: 255, 255, 255;
-        --background: #141414;
+        --background: #0b0b0b;
     }
 }
 
@@ -32,7 +32,7 @@ body {
     color: rgb(var(--foreground-rgb));
     background: var(--background);
 
-    @apply max-w-[600px] mx-auto min-h-screen box-border relative outline outline-gray-800 pb-[69px] pt-5;
+    @apply max-w-[600px] mx-auto min-h-screen box-border relative outline outline-gray-800;
 }
 
 @layer utilities {

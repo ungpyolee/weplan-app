@@ -1,7 +1,11 @@
+import { NavBottom } from '@/components/layout';
 import React from 'react';
-
 const Mypage = () => {
-    return <div>Mypage</div>;
+    return (
+        <>
+            <NavBottom />
+        </>
+    );
 };
 
 export default Mypage;

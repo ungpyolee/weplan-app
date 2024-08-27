@@ -22,7 +22,7 @@ const TabMenu = ({ tabs, initialTabId = 0, onTabChange }: TabMenuProps) => {
         }
     };
     return (
-        <div className="flex space-x-5 px-5 bg-gray-900 sticky top-0 pt-3">
+        <div className="flex space-x-6 px-6 bg-black sticky top-0 pt-3">
             {tabs.map((tab) => (
                 <button
                     key={tab.id}

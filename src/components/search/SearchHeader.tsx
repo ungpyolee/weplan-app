@@ -6,7 +6,7 @@ import { ModalSearchFilter } from '../modal';
 
 const SearchHeader = () => {
     const tabs = [
-        { id: 0, label: '플래너' },
+        { id: 0, label: '위플랜' },
         { id: 1, label: '위플래너' },
     ];
     const [activeTab, setActiveTab] = useState(0);

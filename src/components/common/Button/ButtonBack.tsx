@@ -4,7 +4,7 @@ import { IconTailArrow } from '@/components/Icons';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
-const BackBtn = () => {
+const ButtonBack = () => {
     const router = useRouter();
 
     const handleBack = () => {
@@ -20,4 +20,4 @@ const BackBtn = () => {
     );
 };
 
-export default BackBtn;
+export default ButtonBack;
