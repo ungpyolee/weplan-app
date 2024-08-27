@@ -129,7 +129,9 @@ const PlanDetail = () => {
 
     return (
         <div>
-            <TabMenu tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
+            <div className="px-6">
+                <TabMenu tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
+            </div>
             <div className="pt-10  bg-gray-900">
                 {activeContents.length > 0 ? (
                     activeContents.map((content, index) => (
@@ -210,7 +212,9 @@ const PlanDetail = () => {
                 </div>
             </div>
             <div className="fixed z-10 bottom-0 w-full max-w-[600px] bg-black border-t border-gray-800 overflow-hidden">
-                <TabMenu tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
+                <div className="px-6">
+                    <TabMenu tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
+                </div>
                 <div className="flex justify-between px-5 pb-3">
                     <ButtonDefault value="여정 기록하기" size="sm" color="primary" />
                     <BookmarkBtn />
