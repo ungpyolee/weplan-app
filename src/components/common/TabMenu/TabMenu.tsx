@@ -18,12 +18,12 @@ const TabMenu = ({ tabs, activeTab, onTabChange }: TabMenuProps) => {
         onTabChange(id); // 상태 변경을 외부에서 처리
     };
     return (
-        <div className="flex space-x-6 px-6 bg-black">
+        <div className="flex space-x-6 bg-black overflow-x-auto snap-x snap-mandatory scrollbar-hide">
             {tabs.map((tab) => (
                 <button
                     key={tab.id}
                     onClick={() => handleTabClick(tab.id)}
-                    className={`py-4 ${
+                    className={`py-4 whitespace-nowrap snap-end ${
                         activeTab === tab.id ? 'text-white font-semibold' : 'text-gray-400 border-transparent'
                     }`}
                 >
