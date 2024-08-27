@@ -22,7 +22,6 @@ const RegisterForm = () => {
 
     return (
         <form className="flex flex-col gap-4">
-            <Input type="email" value={email} onChange={handleChangeEmail} placeholder="이메일" />
             <Input type="password" value={password} onChange={handleChangePassword} placeholder="비밀번호" />
             <Input
                 type="password"
@@ -30,7 +29,7 @@ const RegisterForm = () => {
                 onChange={handleChangePasswordConfirm}
                 placeholder="비밀번호 확인"
             />
-            <CheckBox label="개인정보 약관동의" />
+            {/* <CheckBox label="개인정보 약관동의" /> */}
 
             <Submit className="mt-2" value="회원가입" />
         </form>

@@ -4,7 +4,7 @@ import PlanCard from './PlanCard';
 const SnapPlanCard = () => {
     return (
         <div className="overflow-x-auto snap-x snap-mandatory flex scrollbar-hide">
-            <div className="flex space-x-4 p-4">
+            <div className="flex space-x-4">
                 <PlanCard />
                 <PlanCard />
                 <PlanCard />

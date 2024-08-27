@@ -1,7 +1,8 @@
 'use client';
 import { useState } from 'react';
 import TabMenu from '../common/TabMenu/TabMenu';
-import { IconCall, IconCoin, IconPin } from '../Icons';
+import { IconBookmark, IconBookmarkL, IconCall, IconCoin, IconPin } from '../Icons';
+import { BookmarkBtn, ButtonDefault } from '../common/Button';
 
 type TabContent = {
     id: number;
@@ -62,6 +63,10 @@ const PlanDetail = () => {
         { id: 0, label: '1일차' },
         { id: 1, label: '2일차' },
         { id: 2, label: '3일차' },
+        { id: 3, label: '4일차' },
+        { id: 4, label: '5일차' },
+        { id: 5, label: '6일차' },
+        { id: 6, label: '7일차' },
     ];
 
     const tabContents = [
@@ -124,11 +129,11 @@ const PlanDetail = () => {
 
     return (
         <div>
-            <TabMenu tabs={tabs} initialTabId={0} onTabChange={handleTabChange} />
-            <div className="pt-10  bg-gray-800">
+            <TabMenu tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
+            <div className="pt-10  bg-gray-900">
                 {activeContents.length > 0 ? (
                     activeContents.map((content, index) => (
-                        <div key={index} className="flex mb-8 px-5 ">
+                        <div key={index} className="flex mb-8 px-6 ">
                             <div className="w-1.5 h-1.5 rounded-full bg-gray-500 me-3 mt-[9px]"></div>
                             <div>
                                 <div className="flex items-center">
@@ -169,18 +174,19 @@ const PlanDetail = () => {
                         </div>
                     ))
                 ) : (
-                    <p>No content available for this tab.</p>
+                    <p className="px-6 mb-10">No content available for this tab.</p>
                 )}
                 <div className="border-t border-dashed border-gray-700 p-5">
-                    <p className="font-semibold mb-2">{activeTab + 1}일차 경비 </p>
-                    <div className="flex items-center text-literal-gold-light">
-                        <IconCoin className="fill-literal-gold-light h-4 me-2" />
-                        {totalExpense} 원
+                    <div className="px-1">
+                        <p className="font-semibold mb-2">{activeTab + 1}일차 경비 </p>
+                        <div className="flex items-center text-literal-gold-light">
+                            <IconCoin className="fill-literal-gold-light h-4 me-2" />
+                            {totalExpense} 원
+                        </div>
                     </div>
-
-                    <p className="font-semibold mt-6 mb-2">방문 정보 </p>
+                    <p className="font-semibold mt-6 mb-2 ps-1">방문 정보 </p>
                     <div className="flex gap-4">
-                        <div className="w-1/3">
+                        <div className="w-1/4">
                             <div className=" aspect-w-1 aspect-h-1 bg-gray-700 rounded-xl"></div>
                         </div>
                         <div className="flex flex-col justify-center gap-0.5">
@@ -201,6 +207,13 @@ const PlanDetail = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="fixed z-10 bottom-0 w-full max-w-[600px] bg-black border-t border-gray-800 overflow-hidden">
+                <TabMenu tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
+                <div className="flex justify-between px-5 pb-3">
+                    <ButtonDefault value="여정 기록하기" size="sm" color="primary" />
+                    <BookmarkBtn />
                 </div>
             </div>
         </div>

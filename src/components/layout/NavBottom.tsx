@@ -1,6 +1,4 @@
 'use client';
-
-// components/BottomNavBar.tsx
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import {
@@ -24,18 +22,18 @@ const navItems = [
     { path: '/mypage', Icon: IconMypageL, ActiveIcon: IconMypageLB },
 ];
 
-const BottomNavBar = () => {
+const NavBottom = () => {
     const router = useRouter();
     const pathname = usePathname();
 
     return (
-        <nav className="fixed bottom-0 w-full max-w-[600px] bg-gray-900 border-t border-gray-800 pt-2 pb-3 px-3 sm:px-5">
+        <nav className="fixed bottom-0 w-full max-w-[600px] bg-black border-t border-gray-800 pt-2 pb-3 px-3 sm:px-5">
             <div className="w-full mx-auto flex justify-around items-center ">
                 {navItems.map(({ path, Icon, ActiveIcon }) => (
                     <Link
                         key={path}
                         href={path}
-                        className="w-12 h-12 flex justify-center items-center hover:bg-gray-800 transition rounded-xl"
+                        className="w-10 h-10 flex justify-center items-center rounded-xl active:bg-gray-800 transition"
                     >
                         <div className="flex justify-center items-center">
                             <div className="w-5 h-5 flex items-center justify-center">
@@ -49,4 +47,4 @@ const BottomNavBar = () => {
     );
 };
 
-export default BottomNavBar;
+export default NavBottom;

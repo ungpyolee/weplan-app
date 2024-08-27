@@ -1,7 +1,12 @@
+import { NavBottom } from '@/components/layout';
 import React from 'react';
 
 const AddPlan = () => {
-    return <div>AddPlan</div>;
+    return (
+        <>
+            <NavBottom />
+        </>
+    );
 };
 
 export default AddPlan;

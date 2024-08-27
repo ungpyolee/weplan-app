@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import '@/styles/reset.css';
 import '@/styles/globals.css';
-import BottomNavBar from '@/components/layout/BottomNavBar';
 
 export const metadata: Metadata = {
     title: 'WEPLAN',
@@ -15,10 +14,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body>
-                {children}
-                <BottomNavBar />
-            </body>
+            <body>{children}</body>
         </html>
     );
 }
