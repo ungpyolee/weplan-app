@@ -2,7 +2,7 @@ import React from 'react';
 
 const PlanInfo = () => {
     return (
-        <div className="px-6">
+        <div className="px-6 mb-6">
             <p className="text-white mb-0.5 text-sm">{'북마크 000개'}</p>
 
             <p>

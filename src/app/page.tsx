@@ -7,14 +7,14 @@ import Link from 'next/link';
 export default function Home() {
     return (
         <>
-            <div className="flex flex-col text-center">
+            <div className="flex flex-col text-center pb-20">
                 <div className="px-6 pt-5 mb-8 ">
                     <LogoWeplan height="24" className="fill-primary" />
                 </div>
                 <div className="px-5 mb-8">
                     <div className="flex justify-between mb-2">
                         <p className="ms-1 text-base font-medium">지금 뜨는 위플랜</p>
-                        <Link href="#" className="flex items-center me-1">
+                        <Link href="#" className="flex items-center me-1 text-sm font-medium">
                             전체보기
                             <div className="w-3 h-3 flex justify-center items-center rotate-[270deg] ml-2">
                                 <IconArrow className="fill-white" />
@@ -26,7 +26,7 @@ export default function Home() {
                 <div className="px-5 mb-8">
                     <div className="flex justify-between mb-2">
                         <p className="ms-1 text-base font-medium">믿고 보는 위플래너</p>
-                        <Link href="#" className="flex items-center me-1">
+                        <Link href="#" className="flex items-center me-1 text-sm font-medium">
                             전체보기
                             <div className="w-3 h-3 flex justify-center items-center rotate-[270deg] ml-2">
                                 <IconArrow className="fill-white" />
