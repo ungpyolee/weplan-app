@@ -128,7 +128,7 @@ const PlanDetail = () => {
     const totalExpense = calculateTotalExpenseForId(activeTab);
 
     return (
-        <div>
+        <div className="pb-28">
             <div className="px-6">
                 <TabMenu tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
             </div>
@@ -211,7 +211,7 @@ const PlanDetail = () => {
                     </div>
                 </div>
             </div>
-            <div className="fixed z-10 bottom-0 w-full max-w-[600px] bg-black border-t border-gray-800 overflow-hidden">
+            <div className="fixed bottom-0 w-full max-w-[600px] bg-black border-t border-gray-800 overflow-hidden">
                 <div className="px-6">
                     <TabMenu tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
                 </div>
