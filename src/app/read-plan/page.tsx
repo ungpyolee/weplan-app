@@ -1,9 +1,7 @@
 import { ButtonBack } from '@/components/common/Button';
 import { IconPlus } from '@/components/Icons';
 import ModalManagePost from '@/components/modal/ModalManagePost';
-import ImageCard from '@/components/plan-detail/ImageCard';
-import PlanDetail from '@/components/plan-detail/PlanDetail';
-import PlanInfo from '@/components/plan-detail/PlanInfo';
+import { ImageCard, PlanDetail, PlanInfo } from '@/components/read-plan';
 import React from 'react';
 
 const PostedPlan = () => {

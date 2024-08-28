@@ -1,4 +1,5 @@
 import { default as NavBottom } from './NavBottom';
-import { default as NavTop } from './NavTop';
+import { default as NavTopBack } from './NavTopBack';
+import { default as NavTopClose } from './NavTopClose';
 
-export { NavBottom, NavTop };
+export { NavBottom, NavTopBack, NavTopClose };

@@ -17,7 +17,7 @@ import {
 const navItems = [
     { path: '/', Icon: IconHomeL, ActiveIcon: IconHomeLB },
     { path: '/search', Icon: IconSearchL, ActiveIcon: IconSearchLB },
-    { path: '/add-plan', Icon: IconAddL, ActiveIcon: IconAddLB },
+    { path: '/create-plan', Icon: IconAddL, ActiveIcon: IconAddLB },
     { path: '/bookmark', Icon: IconBookmarkL, ActiveIcon: IconBookmarkLB },
     { path: '/mypage', Icon: IconMypageL, ActiveIcon: IconMypageLB },
 ];
