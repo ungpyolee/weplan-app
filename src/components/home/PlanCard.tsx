@@ -5,7 +5,7 @@ import Link from 'next/link';
 const PlanCard = () => {
     return (
         <Link
-            href="/posted-plan"
+            href="/read-plan"
             className="snap-start flex-shrink-0 w-80 rounded-xl shadow-md overflow-hidden text-start"
         >
             <div className="flex flex-col justify-end w-80 h-80 bg-gray-700">

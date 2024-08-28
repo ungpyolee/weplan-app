@@ -1,8 +1,8 @@
 import { ButtonBack } from '../common/Button';
-interface TopNavProps {
+interface NavTopProps {
     title: string;
 }
-const TopNav = ({ title }: TopNavProps) => {
+const NavTopBack = ({ title }: NavTopProps) => {
     return (
         <div className="fixed top-0 flex px-6 py-5 items-center w-full max-w-[600px] bg-black border-b border-gray-800 z-10 justify-between">
             <ButtonBack />
@@ -12,4 +12,4 @@ const TopNav = ({ title }: TopNavProps) => {
     );
 };
 
-export default TopNav;
+export default NavTopBack;

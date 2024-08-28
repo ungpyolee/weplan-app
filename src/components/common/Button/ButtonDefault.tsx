@@ -1,13 +1,22 @@
 import React from 'react';
+
 interface ButtonDefaultProps {
     value: string;
     className?: string;
     size?: 'sm' | 'default' | 'lg';
-    onClick?: () => void;
     color?: 'primary' | 'default';
+    isDisabled?: boolean;
+    onClick?: () => void;
 }
 
-const ButtonDefault = ({ value, className, onClick, color = 'default', size = 'default' }: ButtonDefaultProps) => {
+const ButtonDefault = ({
+    value,
+    className = '',
+    onClick,
+    color = 'default',
+    size = 'default',
+    isDisabled = false,
+}: ButtonDefaultProps) => {
     const sizeClasses = {
         sm: 'h-10',
         default: 'h-13',
@@ -15,16 +24,19 @@ const ButtonDefault = ({ value, className, onClick, color = 'default', size = 'd
     };
 
     const colorClasses = {
-        primary: 'bg-primary hover:bg-primary-light',
-        default: 'bg-gray-800 hover:bg-gray-700',
+        primary: 'bg-primary hover:bg-primary-light text-white',
+        default: 'bg-gray-800 hover:bg-gray-700 text-white',
     };
+
+    const disabledClasses = 'bg-gray-800 cursor-not-allowed text-gray-500';
 
     return (
         <button
-            onClick={onClick}
-            className={`w-full rounded-xl cursor-pointer transition ${className || ''} ${sizeClasses[size]} ${
-                colorClasses[color]
+            onClick={isDisabled ? undefined : onClick}
+            className={`px-4 rounded-xl transition ${className} ${sizeClasses[size]} ${
+                isDisabled ? disabledClasses : colorClasses[color]
             }`}
+            disabled={isDisabled}
         >
             {value}
         </button>

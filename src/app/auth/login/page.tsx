@@ -1,12 +1,12 @@
 import { ButtonKaKao, ButtonNaver } from '@/components/common/Button';
 import { LoginForm } from '@/components/forms';
 import { LogoWeplan } from '@/components/Icons';
-import { NavTop } from '@/components/layout';
+import { NavTopBack } from '@/components/layout';
 import Link from 'next/link';
 const Login = () => {
     return (
         <div className="flex flex-col justify-center h-screen">
-            <NavTop title={'로그인'} />
+            <NavTopBack title={'로그인'} />
             <div className="px-6 mb-6">
                 <p className="text-2xl">
                     일정을 더욱 가치 있게, <br />
