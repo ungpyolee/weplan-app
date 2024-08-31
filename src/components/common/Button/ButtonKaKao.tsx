@@ -4,7 +4,7 @@ import React from 'react';
 const ButtonKaKao = () => {
     return (
         <button>
-            <div className="h-13 w-full rounded-xl border border-gray-500 px-5 flex items-center justify-between bg-[#FEE500] active:bg-[#FEEC40] transition">
+            <div className="h-13 w-full rounded-xl border dark:border-gray-500 px-5 flex items-center justify-between bg-[#FEE500] active:bg-[#FEEC40] transition">
                 <div className="w-5 h-5 flex items-center justify-center">
                     <LogoKakao className="fill-[#191919]" />
                 </div>

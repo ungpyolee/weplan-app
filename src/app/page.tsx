@@ -13,11 +13,11 @@ export default function Home() {
                 </div>
                 <div className="px-5 mb-8">
                     <div className="flex justify-between mb-2">
-                        <p className="ms-1 text-base font-medium">지금 뜨는 위플랜</p>
+                        <p className="ms-1 text-base font-medium darK:text-white">지금 뜨는 위플랜</p>
                         <Link href="#" className="flex items-center me-1 text-sm font-medium">
                             전체보기
                             <div className="w-3 h-3 flex justify-center items-center rotate-[270deg] ml-2">
-                                <IconArrow className="fill-white" />
+                                <IconArrow className="fill-dark dark:fill-white" />
                             </div>
                         </Link>
                     </div>
@@ -26,12 +26,6 @@ export default function Home() {
                 <div className="px-5 mb-8">
                     <div className="flex justify-between mb-2">
                         <p className="ms-1 text-base font-medium">믿고 보는 위플래너</p>
-                        <Link href="#" className="flex items-center me-1 text-sm font-medium">
-                            전체보기
-                            <div className="w-3 h-3 flex justify-center items-center rotate-[270deg] ml-2">
-                                <IconArrow className="fill-white" />
-                            </div>
-                        </Link>
                     </div>
                     <SnapUserCard />
                 </div>

@@ -129,10 +129,10 @@ const PlanDetail = () => {
 
     return (
         <div className="pb-28">
-            <div className="px-6">
+            <div className="px-6 border-t border-b dark:border-gray-800">
                 <TabMenu tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
             </div>
-            <div className="pt-10  bg-gray-900">
+            <div className="pt-10  dark:bg-gray-900">
                 {activeContents.length > 0 ? (
                     activeContents.map((content, index) => (
                         <div key={index} className="flex mb-8 px-6 ">
@@ -140,19 +140,19 @@ const PlanDetail = () => {
                             <div>
                                 <div className="flex items-center">
                                     {content.starttime} ~ {content.endtime}
-                                    <span className="ms-2 px-3 py-0.5 text-sm rounded-full bg-literal-green-dark">
+                                    <span className="ms-2 px-3 py-0.5 text-sm rounded-full bg-literal-green-dark text-white">
                                         {content.category}
                                     </span>
                                 </div>
                                 <h2 className="mt-2">{content.description}</h2>
 
                                 {content.departure ? (
-                                    <div className="text-sm text-gray-300 my-2 flex ">
+                                    <div className="text-sm dark:text-gray-300 my-2 flex ">
                                         <div className="w-4 me-2 flex flex-col pt-1 items-center">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-gray-400 mb-1"></div>
-                                            <div className="w-1 h-1 rounded-full bg-gray-400 mb-1"></div>
-                                            <div className="w-1 h-1 rounded-full bg-gray-400 mb-1"></div>
-                                            <IconPin className="h-4 fill-gray-400" />
+                                            <div className="w-1.5 h-1.5 rounded-full bg-gray-600 dark:bg-gray-400 mb-1"></div>
+                                            <div className="w-1 h-1 rounded-full bg-gray-600 dark:bg-gray-400 mb-1"></div>
+                                            <div className="w-1 h-1 rounded-full bg-gray-600 dark:bg-gray-400 mb-1"></div>
+                                            <IconPin className="h-4 fill-gray-600 dark:fill-gray-400" />
                                         </div>
                                         <div>
                                             <p className="mb-1">출발 : {content.departure}</p>
@@ -160,16 +160,16 @@ const PlanDetail = () => {
                                         </div>
                                     </div>
                                 ) : (
-                                    <div className="text-sm text-gray-300 my-2 flex items-center ">
+                                    <div className="text-sm dark:text-gray-300 my-2 flex items-center ">
                                         <div className="w-4 me-2 flex justify-center">
-                                            <IconPin className="h-4 fill-gray-400" />
+                                            <IconPin className="h-4 fill-gray-600 dark:fill-gray-400" />
                                         </div>
                                         <p>도착 : {content.destination}</p>
                                     </div>
                                 )}
 
-                                <div className="flex items-center text-literal-gold-light text-sm">
-                                    <IconCoin className="fill-literal-gold-light h-4 me-2" />
+                                <div className="flex items-center text-gray-600 dark:text-literal-gold-light text-sm">
+                                    <IconCoin className="fill-gray-600 dark:fill-literal-gold-light h-4 me-2" />
                                     {content.expense} 원
                                 </div>
                             </div>
@@ -178,11 +178,11 @@ const PlanDetail = () => {
                 ) : (
                     <p className="px-6 mb-10">No content available for this tab.</p>
                 )}
-                <div className="border-t border-dashed border-gray-700 p-5">
+                <div className="border-t border-dashed dark:border-gray-700 p-5">
                     <div className="px-1">
                         <p className="font-semibold mb-2">{activeTab + 1}일차 경비 </p>
-                        <div className="flex items-center text-literal-gold-light">
-                            <IconCoin className="fill-literal-gold-light h-4 me-2" />
+                        <div className="flex items-center text-gray-600 dark:text-literal-gold-light">
+                            <IconCoin className="fill-gray-600 dark:fill-literal-gold-light h-4 me-2" />
                             {totalExpense} 원
                         </div>
                     </div>
@@ -211,7 +211,7 @@ const PlanDetail = () => {
                     </div>
                 </div>
             </div>
-            <div className="fixed bottom-0 w-full max-w-[600px] bg-black border-t border-gray-800 overflow-hidden">
+            <div className="fixed bottom-0 w-full max-w-[600px] bg-white dark:bg-black border-t dark:border-gray-800 overflow-hidden">
                 <div className="px-6">
                     <TabMenu tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
                 </div>

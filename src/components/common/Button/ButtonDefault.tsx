@@ -25,10 +25,10 @@ const ButtonDefault = ({
 
     const colorClasses = {
         primary: 'bg-primary hover:bg-primary-light text-white',
-        default: 'bg-gray-800 hover:bg-gray-700 text-white',
+        default: 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-black dark:text-white',
     };
 
-    const disabledClasses = 'bg-gray-800 cursor-not-allowed text-gray-500';
+    const disabledClasses = 'bg-gray-100 text-gray-300 dark:bg-gray-800 cursor-not-allowed dark:text-gray-500';
 
     return (
         <button

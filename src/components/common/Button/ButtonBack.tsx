@@ -14,7 +14,7 @@ const ButtonBack = () => {
     return (
         <button className="flex justify-center items-center" onClick={handleBack}>
             <div className="w-5 h-5 flex items-center justify-center">
-                <IconTailArrow className="fill-white " />
+                <IconTailArrow className="dark:fill-white " />
             </div>
         </button>
     );

@@ -14,11 +14,11 @@ const Login = () => {
                 </p>
             </div>
             <LoginForm />
-            <div className="mt-8 pt-8 border-t border-gray-800 relative">
-                <p className="w-5 text-center bg-black absolute top-[-12px] left-1/2 translate-x-[-50%] text-gray-500">
+            <div className="mt-8 pt-8 border-t dark:border-gray-800 relative">
+                <p className="w-5 text-center bg-white dark:bg-black absolute top-[-12px] left-1/2 translate-x-[-50%] text-gray-500">
                     or
                 </p>
-                <p className="text-center text-gray-300 mb-4">소셜 로그인</p>
+                <p className="text-center text-gray-500 dark:text-gray-300 mb-4">소셜 로그인</p>
                 <div className="flex flex-col gap-3 px-5">
                     <ButtonNaver />
                     <ButtonKaKao />

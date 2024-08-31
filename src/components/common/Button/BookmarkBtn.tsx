@@ -12,7 +12,11 @@ const BookmarkBtn = () => {
     return (
         <button onClick={handleClick} className="p-3">
             <div className="w-5 h-5 px-0.5">
-                {isBookmark ? <IconBookmark className="fill-white" /> : <IconBookmarkL className="fill-white" />}
+                {isBookmark ? (
+                    <IconBookmark className="fill-primary dark:fill-white" />
+                ) : (
+                    <IconBookmarkL className="fill-primary dark:fill-white" />
+                )}
             </div>
         </button>
     );

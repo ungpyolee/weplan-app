@@ -14,7 +14,7 @@ const ButtonError = ({ value, className, size = 'default' }: ButtonErrorProps) =
 
     return (
         <button
-            className={`w-full bg-gray-800 hover:bg-gray-700 rounded-xl text-literal-danger text-base cursor-pointer transition ${
+            className={`w-full dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl text-literal-danger text-base cursor-pointer transition ${
                 className || ''
             } ${sizeClasses[size]}`}
         >

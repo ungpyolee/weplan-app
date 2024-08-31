@@ -32,11 +32,11 @@ const ModalManagePost = () => {
             <AnimatePresence>
                 {isOpen && (
                     <div
-                        className="fixed bottom-0 left-1/2 translate-x-[-50%] w-full max-w-[600px] h-full bg-black/90 z-10 flex flex-col justify-end modal-overlay"
+                        className="fixed bottom-0 left-1/2 translate-x-[-50%] w-full max-w-[600px] h-full bg-black/10 dark:bg-black/90 z-10 flex flex-col justify-end modal-overlay"
                         onClick={handleClickOutside}
                     >
                         <motion.div
-                            className="w-full bg-gray-900 shadow-sm rounded-t-3xl pt-7 pb-6 px-5 modal-content"
+                            className="w-full bg-white dark:bg-gray-900 shadow-sm rounded-t-3xl pt-7 pb-6 px-5 modal-content"
                             initial="hidden"
                             animate="visible"
                             exit="exit"
@@ -46,7 +46,7 @@ const ModalManagePost = () => {
                             <header className="flex items-center justify-between mb-10">
                                 <p>플랜 관리</p>
                                 <button className="close w-5 h-5" onClick={toggleModal}>
-                                    <IconClose className="fill-white" />
+                                    <IconClose className="dark:fill-white" />
                                 </button>
                             </header>
                             <div className="flex flex-col gap-2.5">

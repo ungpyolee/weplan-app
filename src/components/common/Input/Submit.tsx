@@ -15,9 +15,9 @@ const Submit = ({ value, className, size = 'default' }: SubmitProps) => {
     return (
         <input
             type="submit"
-            className={`bg-primary hover:bg-primary-light rounded-xl cursor-pointer transition ${className || ''} ${
-                sizeClasses[size]
-            }`}
+            className={`text-white bg-primary hover:bg-primary-light rounded-xl cursor-pointer transition ${
+                className || ''
+            } ${sizeClasses[size]}`}
             value={value}
         ></input>
     );
