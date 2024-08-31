@@ -22,7 +22,7 @@ const Input = ({ value, onChange, placeholder, type, size = 'default', ...props 
             onChange={onChange}
             placeholder={placeholder || '내용을 입력해주세요'}
             required
-            className={`w-full rounded-xl border border-gray-500 px-5 bg-transparent hover:border-white focus:border-primary focus:outline-none transition ${sizeClasses[size]} {}...props}`}
+            className={`w-full rounded-xl border border-gray-500 px-5 bg-transparent hover:border-primary dark:hover:border-white focus:border-primary focus:outline-none transition ${sizeClasses[size]} {}...props}`}
         />
     );
 };

@@ -25,10 +25,10 @@ const InputSearch = ({ value, onChange, placeholder, type, size = 'default', ...
                 onChange={onChange}
                 placeholder={placeholder || '내용을 입력해주세요'}
                 required
-                className={`w-full rounded-xl border border-gray-500 pl-12 pr-5 bg-transparent hover:border-white focus:border-primary focus:outline-none transition line-clamp-1 ${sizeClasses[size]} {}...props}`}
+                className={`w-full rounded-xl border border-gray-500 pl-12 pr-5 bg-transparent dark:hover:border-white focus:border-primary focus:outline-none transition line-clamp-1 ${sizeClasses[size]} {}...props}`}
             />
             <div className="absolute w-5 h-5 flex justify-center items-center top-1/2 left-4 translate-y-[-50%]">
-                <IconSearchL />
+                <IconSearchL className="fill-black dark:fill-white" />
             </div>
         </div>
     );
