@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { ButtonDefault } from '../common/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ButtonFilter } from '../common/Button/';
-import { CheckBox } from '../common/Input';
+import { CheckBox, RangeSlider } from '../common/Input';
 import Radio from '../common/Input/Radio';
 
 interface FilterOptionProps {
@@ -13,6 +13,10 @@ interface FilterOptionProps {
 }
 
 const ModalSearchFilter = () => {
+    const [minValue, setMinValue] = useState(0);
+    const [maxValue, setMaxValue] = useState(1000000);
+    const [minDays, setMinDays] = useState(1);
+    const [maxDays, setMaxDays] = useState(7);
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleModal = () => {
@@ -32,38 +36,15 @@ const ModalSearchFilter = () => {
         exit: { y: '100%', opacity: 0 },
     };
 
-    const [selectedDays, setSelectedDays] = useState<string[]>([]);
-    const [selectedBudget, setSelectedBudget] = useState<string[]>([]);
-
-    const daysOptions = ['1일', '2일', '3일', '4일', '5일', '6일', '7일'];
-    const budgetOptions = [
-        '0 ~ 10만원',
-        '10만원 ~ 20만원',
-        '20만원 ~ 30만원',
-        '30만원 ~ 50만원',
-        '50만원 ~ 100만원',
-        '100만원 이상',
-    ];
-
-    const handleDaysChange = (day: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
-        if (event.target.checked) {
-            setSelectedDays((prev) => [...prev, day]);
-        } else {
-            setSelectedDays((prev) => prev.filter((d) => d !== day));
-        }
-    };
-
-    const handleBudgetChange = (budget: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
-        if (event.target.checked) {
-            setSelectedBudget((prev) => [...prev, budget]);
-        } else {
-            setSelectedBudget((prev) => prev.filter((d) => d !== budget));
-        }
-    };
-
     const handleReset = () => {
-        setSelectedDays([]);
-        setSelectedBudget([]);
+        setMinValue(0);
+        setMaxValue(1000000);
+        setMinDays(1);
+        setMaxDays(7);
+    };
+
+    const formatNumber = (num: number) => {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
 
     return (
@@ -89,36 +70,39 @@ const ModalSearchFilter = () => {
                                     <IconClose className="fill-white" />
                                 </button>
                             </header>
-                            <div className="mb-6">
+                            <div className="mb-8">
                                 <p className="font-semibold">일정 기간</p>
-                                <div className="mt-2 flex gap-2 flex-wrap">
-                                    {daysOptions.map((day) => (
-                                        <CheckBox
-                                            key={day}
-                                            name="days"
-                                            value={day}
-                                            label={day}
-                                            checked={selectedDays.includes(day)}
-                                            onChange={handleDaysChange(day)}
-                                        />
-                                    ))}
-                                </div>
+                                <p className="text-primary-light font-medium mt-2">
+                                    {formatNumber(minDays)}일<span className="mx-1"> - </span>
+                                    {formatNumber(maxDays)}일
+                                </p>
+                                <RangeSlider
+                                    min={1}
+                                    max={7}
+                                    step={1}
+                                    minValue={minDays}
+                                    maxValue={maxDays}
+                                    onMinChange={setMinDays}
+                                    onMaxChange={setMaxDays}
+                                />
                             </div>
-                            <div className="mb-10">
+                            <div className="mb-12">
                                 <p className="font-semibold">총 경비</p>
-                                <div className="mt-2 flex gap-2 flex-wrap">
-                                    {budgetOptions.map((budget) => (
-                                        <CheckBox
-                                            key={budget}
-                                            name="budget"
-                                            value={budget}
-                                            label={budget}
-                                            checked={selectedBudget.includes(budget)}
-                                            onChange={handleBudgetChange(budget)}
-                                        />
-                                    ))}
-                                </div>
+                                <p className="text-primary-light font-medium mt-2">
+                                    {formatNumber(minValue)}원<span className="mx-1"> - </span>
+                                    {formatNumber(maxValue)}원
+                                </p>
+                                <RangeSlider
+                                    min={0}
+                                    max={1000000}
+                                    step={10000}
+                                    minValue={minValue}
+                                    maxValue={maxValue}
+                                    onMinChange={setMinValue}
+                                    onMaxChange={setMaxValue}
+                                />
                             </div>
+
                             <div className="flex flex-col gap-2.5">
                                 <ButtonDefault value="초기화" onClick={handleReset} />
                                 <ButtonDefault value="확인" color="primary" />
