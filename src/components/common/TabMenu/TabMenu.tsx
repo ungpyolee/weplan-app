@@ -1,30 +1,38 @@
-'use client';
-import { useState } from 'react';
+import React from 'react';
 
-type Tab = {
+interface Tab {
     id: number;
     label: string;
-};
+}
 
 interface TabMenuProps {
-    tabs: Tab[];
-    // initialTabId?: number;
+    tabs?: Tab[];
+    selectedPeriod?: string;
     activeTab: number;
     onTabChange: (id: number) => void;
 }
 
-const TabMenu = ({ tabs, activeTab, onTabChange }: TabMenuProps) => {
-    const handleTabClick = (id: number) => {
-        onTabChange(id); // 상태 변경을 외부에서 처리
-    };
+const TabMenu: React.FC<TabMenuProps> = ({ tabs, selectedPeriod, activeTab, onTabChange }) => {
+    let finalTabs: Tab[] = tabs || [];
+
+    if (!tabs && selectedPeriod) {
+        const days = parseInt(selectedPeriod.replace('일', ''), 10);
+        finalTabs = Array.from({ length: days }, (_, i) => ({
+            id: i + 1,
+            label: `${i + 1}일차`,
+        }));
+    }
+
     return (
         <div className="flex space-x-6 dark:bg-black overflow-x-auto snap-x snap-mandatory scrollbar-hide">
-            {tabs.map((tab) => (
+            {finalTabs.map((tab) => (
                 <button
                     key={tab.id}
-                    onClick={() => handleTabClick(tab.id)}
+                    onClick={() => onTabChange(tab.id)}
                     className={`py-4 whitespace-nowrap snap-end ${
-                        activeTab === tab.id ? 'dark:text-white font-semibold' : 'text-gray-400 border-transparent'
+                        activeTab === tab.id
+                            ? 'text-primary dark:text-white font-semibold'
+                            : 'text-gray-800 dark:text-gray-400 border-transparent'
                     }`}
                 >
                     {tab.label}

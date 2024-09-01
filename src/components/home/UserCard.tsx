@@ -1,5 +1,6 @@
 import React from 'react';
 import { IconPlus } from '../Icons';
+import { ButtonFollow } from '../common/Button';
 
 const UserCard = () => {
     return (
@@ -25,12 +26,7 @@ const UserCard = () => {
                     <p className="line-clamp-2 text-start dark:text-gray-200 text-base">
                         파워 J의 여행 일정을 공유합니다. 산이나 바다 자연과 함께하는 여행
                     </p>
-                    <button className="text-xs bg-primary-dark dark:bg-primary text-white px-2 py-0.5 font-medium rounded-full flex items-center transition whitespace-nowrap">
-                        <div className="h-2 w-2 me-0.5 flex items-center">
-                            <IconPlus className="fill-white " />
-                        </div>
-                        팔로우
-                    </button>
+                    <ButtonFollow />
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@ const NavBottom = () => {
     const pathname = usePathname();
 
     return (
-        <nav className="fixed bottom-0 w-full max-w-[600px] dark:bg-black border-t brder-gray-100 dark:border-gray-800 pt-2 pb-3 px-3 sm:px-5">
+        <nav className="fixed bottom-0 w-full max-w-[600px] bg-white dark:bg-black border-t brder-gray-100 dark:border-gray-800 pt-2 pb-3 px-3 sm:px-5">
             <div className="w-full mx-auto flex justify-around items-center ">
                 {navItems.map(({ path, Icon, ActiveIcon }) => (
                     <Link

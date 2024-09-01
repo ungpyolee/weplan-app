@@ -7,7 +7,7 @@ const BookmarkBtn = () => {
     const [isBookmark, setIsBookmark] = useState<boolean>(false);
 
     const handleClick = () => {
-        setIsBookmark((prevState) => !prevState); // 상태를 토글합니다.
+        setIsBookmark((prevState) => !prevState);
     };
     return (
         <button onClick={handleClick} className="p-3">
