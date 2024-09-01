@@ -24,7 +24,9 @@ const TabMenu = ({ tabs, activeTab, onTabChange }: TabMenuProps) => {
                     key={tab.id}
                     onClick={() => handleTabClick(tab.id)}
                     className={`py-4 whitespace-nowrap snap-end ${
-                        activeTab === tab.id ? 'dark:text-white font-semibold' : 'text-gray-400 border-transparent'
+                        activeTab === tab.id
+                            ? 'text-primary dark:text-white font-semibold'
+                            : 'text-gray-800 dark:text-gray-400 border-transparent'
                     }`}
                 >
                     {tab.label}

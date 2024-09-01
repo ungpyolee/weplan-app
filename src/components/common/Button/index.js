@@ -6,5 +6,16 @@ import { default as BookmarkBtn } from './BookmarkBtn';
 import { default as ButtonManagePost } from './ButtonManagePost';
 import { default as ButtonFilter } from './ButtonFilter';
 import { default as ButtonDefault } from './ButtonDefault';
+import { default as ButtonFollow } from './ButtonFollow';
 
-export { ButtonKaKao, ButtonNaver, ButtonBack, LikeBtn, BookmarkBtn, ButtonManagePost, ButtonDefault, ButtonFilter };
+export {
+    ButtonKaKao,
+    ButtonNaver,
+    ButtonBack,
+    LikeBtn,
+    BookmarkBtn,
+    ButtonManagePost,
+    ButtonDefault,
+    ButtonFilter,
+    ButtonFollow,
+};

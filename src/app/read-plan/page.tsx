@@ -1,4 +1,4 @@
-import { ButtonBack } from '@/components/common/Button';
+import { ButtonBack, ButtonFollow } from '@/components/common/Button';
 import { IconPlus } from '@/components/Icons';
 import ModalManagePost from '@/components/modal/ModalManagePost';
 import { ImageCard, PlanDetail, PlanInfo } from '@/components/read-plan';
@@ -10,12 +10,7 @@ const PostedPlan = () => {
             <div className="fixed top-0 flex px-6 py-5 items-center w-full max-w-[600px] bg-white dark:bg-black border-b dark:border-gray-800 z-10">
                 <ButtonBack />
                 <span className="ms-4">{'게시작성자'}</span>
-                <button className="ml-2 text-sm border px-2 rounded-full flex items-center hover:bg-gray-700 transition">
-                    <div className="h-2 w-2 me-1">
-                        <IconPlus className="dark:fill-white" />
-                    </div>
-                    팔로우
-                </button>
+                <ButtonFollow />
                 <span className="text-gray-400 ml-auto me-4 text-sm">{'조회 000'}</span>
                 <ModalManagePost />
             </div>
