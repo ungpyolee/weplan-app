@@ -1,5 +1,3 @@
-import React, { useId } from 'react';
-
 interface CheckBoxProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label?: string;
     name?: string;
