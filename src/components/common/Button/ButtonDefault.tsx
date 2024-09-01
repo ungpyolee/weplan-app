@@ -33,7 +33,7 @@ const ButtonDefault = ({
     return (
         <button
             onClick={isDisabled ? undefined : onClick}
-            className={`px-4 rounded-xl transition ${className} ${sizeClasses[size]} ${
+            className={`px-4 rounded-xl transition whitespace-nowrap" ${className} ${sizeClasses[size]} ${
                 isDisabled ? disabledClasses : colorClasses[color]
             }`}
             disabled={isDisabled}
