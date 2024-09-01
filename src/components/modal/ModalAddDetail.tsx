@@ -25,8 +25,8 @@ const ModalAddDetail = ({ isOpen, onClose }: ModalAddDetailProps) => {
     };
 
     const tabs = [
-        { id: 0, label: '위플랜' },
-        { id: 1, label: '위플래너' },
+        { id: 0, label: '장소' },
+        { id: 1, label: '이동' },
     ];
 
     const handleTabChange = (id: number) => {
