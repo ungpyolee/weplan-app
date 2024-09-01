@@ -5,14 +5,19 @@ import { TabMenu } from '@/components/common/TabMenu';
 import { NavCreateStatus } from '@/components/create-plan';
 import { NavTopClose } from '@/components/layout';
 import ModalSetPeriod from '@/components/modal/ModalSetPeriod';
+import ModalSaveOrExit from '@/components/modal/ModalSaveOrExit';
 
 const CreatePlan: React.FC = () => {
     const [isModalSetPeriodOpen, setIsModalSetPeriodOpen] = useState(false);
+    const [isModalSaveOrExitOpen, setIsModalSaveOrExitOpen] = useState(false);
     const [selectedPeriod, setSelectedPeriod] = useState('');
     const [activeTab, setActiveTab] = useState(1);
 
+    const handleOpenModalSaveOrExit = () => setIsModalSaveOrExitOpen(true);
+    const handleCloseModalSaveOrExit = () => setIsModalSaveOrExitOpen(false);
+
     const handleOpenModalSetPeriod = () => setIsModalSetPeriodOpen(true);
-    const handleCloseModal = () => setIsModalSetPeriodOpen(false);
+    const handleCloseModalSetPeriod = () => setIsModalSetPeriodOpen(false);
     const handleConfirmPeriod = (day: string) => {
         setSelectedPeriod(day);
         setActiveTab(1);
@@ -24,13 +29,14 @@ const CreatePlan: React.FC = () => {
 
     return (
         <div className="pt-16">
-            <NavTopClose title="새 일정 작성" />
+            <NavTopClose title="새 일정 작성" onClick={handleOpenModalSaveOrExit} />
+            <ModalSaveOrExit isOpen={isModalSaveOrExitOpen} onClose={handleCloseModalSaveOrExit} />
             <div className="flex ps-6 pe-5 py-6 justify-between items-center">
                 <p className="text-base dark:text-gray-300">기간 설정</p>
                 <ButtonDefault value="선택" size="sm" onClick={handleOpenModalSetPeriod} />
                 <ModalSetPeriod
                     isOpen={isModalSetPeriodOpen}
-                    onClose={handleCloseModal}
+                    onClose={handleCloseModalSetPeriod}
                     onConfirm={handleConfirmPeriod}
                 />
             </div>
