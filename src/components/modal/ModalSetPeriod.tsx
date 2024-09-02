@@ -76,7 +76,12 @@ const ModalSetPeriod: React.FC<ModalSetPeriodProps> = ({ isOpen, onClose, onConf
                             </div>
                         </div>
                         <div className="flex flex-col">
-                            <ButtonDefault value="확인" color="primary" onClick={handleConfirm} />
+                            <ButtonDefault
+                                value="확인"
+                                color="primary"
+                                onClick={handleConfirm}
+                                isDisabled={selectedDay ? false : true}
+                            />
                         </div>
                     </motion.div>
                 </div>
