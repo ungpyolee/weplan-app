@@ -6,8 +6,8 @@ import React from 'react';
 
 const PostedPlan = () => {
     return (
-        <div className="pt-16">
-            <div className="fixed top-0 flex px-6 py-5 items-center w-full max-w-[600px] bg-white dark:bg-black border-b dark:border-gray-800 z-10">
+        <div className="pt-15">
+            <div className="fixed top-0 flex px-6 pt-5 pb-4 items-center w-full max-w-[600px] bg-white dark:bg-black border-b dark:border-gray-800 z-10">
                 <ButtonBack />
                 <span className="ms-4">{'게시작성자'}</span>
                 <ButtonFollow />

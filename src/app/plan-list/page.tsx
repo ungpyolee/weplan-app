@@ -1,4 +1,4 @@
-import PlanListHeader from '@/components/common/plan-list/PlanListHeader';
+import PlanListHeader from '@/components/plan-list/PlanListHeader';
 import PlanCard from '@/components/home/PlanCard';
 import { NavBottom } from '@/components/layout';
 import React from 'react';

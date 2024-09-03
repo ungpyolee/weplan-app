@@ -129,7 +129,7 @@ const PlanDetail = () => {
     const totalExpense = calculateTotalExpenseForId(activeTab);
 
     return (
-        <div className="pb-28 pt-8 bg-gray-900">
+        <div className="pb-28 pt-8 dark:bg-gray-900">
             <p className="font-semibold pb-4 px-6 border-b dark:border-gray-800">{activeTab + 1}일차 상세 일정 </p>
 
             <div className="pt-10">
@@ -189,7 +189,7 @@ const PlanDetail = () => {
                     <p className="font-semibold mt-6 mb-2 ps-1">방문 정보 </p>
                     <div className="flex gap-4">
                         <div className="w-1/4">
-                            <div className=" aspect-w-1 aspect-h-1 bg-gray-700 rounded-xl"></div>
+                            <div className=" aspect-w-1 aspect-h-1 bg-gray-100 dark:bg-gray-700 rounded-xl"></div>
                         </div>
                         <div className="flex flex-col justify-center gap-0.5">
                             <div className="flex mb-0.5">

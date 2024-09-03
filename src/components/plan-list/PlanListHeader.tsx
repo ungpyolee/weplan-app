@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { TabMenu } from '../TabMenu';
+import { TabMenu } from '../common/TabMenu';
 
 const PlanListHeader = () => {
     const tabs = [
