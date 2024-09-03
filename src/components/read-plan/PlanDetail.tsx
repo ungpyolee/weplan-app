@@ -129,11 +129,10 @@ const PlanDetail = () => {
     const totalExpense = calculateTotalExpenseForId(activeTab);
 
     return (
-        <div className="pb-28">
-            <div className="px-6 border-t border-b dark:border-gray-800">
-                <TabMenu tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
-            </div>
-            <div className="pt-10  dark:bg-gray-900">
+        <div className="pb-28 pt-8 bg-gray-900">
+            <p className="font-semibold pb-4 px-6 border-b dark:border-gray-800">{activeTab + 1}일차 상세 일정 </p>
+
+            <div className="pt-10">
                 {activeContents.length > 0 ? (
                     activeContents.map((content, index) => (
                         <div key={index} className="flex mb-8 px-6 ">

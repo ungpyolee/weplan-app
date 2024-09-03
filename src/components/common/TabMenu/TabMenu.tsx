@@ -24,7 +24,7 @@ const TabMenu: React.FC<TabMenuProps> = ({ tabs, selectedPeriod, activeTab, onTa
     }
 
     return (
-        <div className="flex space-x-6 dark:bg-black overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+        <div className="flex space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide">
             {finalTabs.map((tab) => (
                 <button
                     key={tab.id}
