@@ -46,7 +46,9 @@ const CustomTimePicker = () => {
                     <div
                         key={p}
                         className={`h-10 flex justify-center items-center snap-center ${
-                            p === period ? 'font-medium' : 'dark:text-gray-400'
+                            p === period
+                                ? 'text-primary dark:text-white font-medium'
+                                : 'dark:text-gray-400 text-gray-700'
                         }`}
                     >
                         {p}
@@ -64,7 +66,7 @@ const CustomTimePicker = () => {
                     <div
                         key={h}
                         className={`h-10 flex justify-center items-center snap-center ${
-                            h === hour ? 'font-medium' : 'dark:text-gray-400'
+                            h === hour ? 'text-primary dark:text-white font-medium' : 'dark:text-gray-400 text-gray-700'
                         }`}
                     >
                         {h}
@@ -82,7 +84,9 @@ const CustomTimePicker = () => {
                     <div
                         key={m}
                         className={`h-10 flex justify-center items-center snap-center ${
-                            m === minute ? 'font-medium' : 'dark:text-gray-400'
+                            m === minute
+                                ? 'text-primary dark:text-white font-medium'
+                                : 'dark:text-gray-400 text-gray-700'
                         }`}
                     >
                         {m}
@@ -90,8 +94,8 @@ const CustomTimePicker = () => {
                 ))}
                 <div className="h-10 flex justify-center items-center snap-center"></div>
             </div>
-            <div className="absolute h-8 bg-gradient-to-b from-transparent via-gray-900/80 to-gray-900 bottom-0 w-full"></div>
-            <div className="absolute h-8 bg-gradient-to-b from-gray-900 via-gray-900/80 to-transparent top-0 w-full"></div>
+            <div className="absolute h-8 bg-gradient-to-b from-transparent dark:via-gray-900/80 dark:to-gray-900 via-white/80 to-white bottom-0 w-full"></div>
+            <div className="absolute h-8 bg-gradient-to-b from-white via-white/80 dark:from-gray-900 dark:via-gray-900/80 to-transparent top-0 w-full"></div>
         </div>
     );
 };

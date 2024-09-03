@@ -9,8 +9,8 @@ const PlanCard = () => {
             className="snap-start flex-shrink-0 w-80 rounded-xl border dark:border-gray-800 overflow-hidden text-start"
         >
             <div className="flex flex-col justify-end w-80 h-80 bg-gray-200 dark:bg-gray-700">
-                <div className="flex px-5 pb-2 pt-5 bg-gradient-to-b from-transparent via-black/40 to-black/80">
-                    <span className="me-auto text-sm font-semibold text-white">{'게시자닉네임'}</span>
+                <div className="flex px-5 pb-2 pt-5 bg-gradient-to-b from-transparent dark:via-gray-900/50 dark:to-gray-900 via-white/50 to-white">
+                    <span className="me-auto text-xs font-semibold">{'게시자닉네임'}</span>
                 </div>
             </div>
             <div className="px-5 pt-4 pb-5 bg-transparent dark:bg-gray-900">

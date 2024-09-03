@@ -2,6 +2,7 @@ import { IconClose } from '@/components/Icons';
 import { ButtonDefault } from '../common/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react';
+import TimePicker from 'react-time-picker';
 import 'react-time-picker/dist/TimePicker.css';
 import CustomTimePicker from '../create-plan/CustomTimePicker';
 interface ModalStartTimeProps {
@@ -10,10 +11,6 @@ interface ModalStartTimeProps {
 }
 
 const ModalStartTime = ({ isOpen, onClose }: ModalStartTimeProps) => {
-    const [period, setPeriod] = useState('AM');
-    const [hour, setHour] = useState('12');
-    const [minute, setMinute] = useState('00');
-
     const handleClickOutside = (event: React.MouseEvent<HTMLDivElement>) => {
         if ((event.target as HTMLElement).classList.contains('modal-overlay')) {
             onClose();
@@ -50,14 +47,7 @@ const ModalStartTime = ({ isOpen, onClose }: ModalStartTimeProps) => {
                                 </button>
                             </header>
                             <section>
-                                <CustomTimePicker
-                                    period={period}
-                                    setPeriod={setPeriod}
-                                    hour={hour}
-                                    setHour={setHour}
-                                    minute={minute}
-                                    setMinute={setMinute}
-                                />
+                                <CustomTimePicker />
                             </section>
                             <div className="flex flex-col gap-2.5">
                                 <ButtonDefault value="확인" />

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import TabMenu from '../common/TabMenu/TabMenu';
 import { IconBookmark, IconBookmarkL, IconCall, IconCoin, IconPin } from '../Icons';
 import { BookmarkBtn, ButtonDefault } from '../common/Button';
+import { formatNumber } from '@/utils/formatNumber';
 
 type TabContent = {
     id: number;
@@ -170,7 +171,7 @@ const PlanDetail = () => {
 
                                 <div className="flex items-center text-gray-600 dark:text-literal-gold-light text-sm">
                                     <IconCoin className="fill-gray-600 dark:fill-literal-gold-light h-4 me-2" />
-                                    {content.expense} 원
+                                    {formatNumber(content.expense)} 원
                                 </div>
                             </div>
                         </div>
@@ -183,7 +184,7 @@ const PlanDetail = () => {
                         <p className="font-semibold mb-2">{activeTab + 1}일차 경비 </p>
                         <div className="flex items-center text-gray-600 dark:text-literal-gold-light">
                             <IconCoin className="fill-gray-600 dark:fill-literal-gold-light h-4 me-2" />
-                            {totalExpense} 원
+                            {formatNumber(totalExpense)} 원
                         </div>
                     </div>
                     <p className="font-semibold mt-6 mb-2 ps-1">방문 정보 </p>

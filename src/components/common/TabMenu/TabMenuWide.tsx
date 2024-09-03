@@ -22,7 +22,7 @@ const TabMenuWide = ({ tabs, initialTabId = 0, onTabChange }: TabMenuProps) => {
         }
     };
     return (
-        <div className="flex px-6 dark:bg-black w-full">
+        <div className="flex px-6 w-full">
             {tabs.map((tab) => (
                 <button
                     key={tab.id}
