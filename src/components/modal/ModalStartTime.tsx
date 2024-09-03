@@ -11,8 +11,6 @@ interface ModalStartTimeProps {
 }
 
 const ModalStartTime = ({ isOpen, onClose }: ModalStartTimeProps) => {
-    const [value, setValue] = useState('10:00');
-
     const handleClickOutside = (event: React.MouseEvent<HTMLDivElement>) => {
         if ((event.target as HTMLElement).classList.contains('modal-overlay')) {
             onClose();

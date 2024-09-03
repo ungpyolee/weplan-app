@@ -20,7 +20,9 @@ const ModalAddDetail = ({ isOpen, onClose }: ModalAddDetailProps) => {
     const [isModalSelectCategoryOpen, setIsModalSelectCategoryOpen] = useState<boolean>(false);
     const [isModalSearchLocationOpen, setIsModalSearchLocationOpen] = useState<boolean>(false);
 
-    const [isDetailText, setIsDetailText] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState<string>('');
+    const [detailText, setDetailText] = useState('');
+    const [detailExpense, setDetailExpense] = useState('');
     const [activeTab, setActiveTab] = useState(0);
 
     const handleOpenModalStartTime = () => setIsModalStartTimeOpen(true);
@@ -33,7 +35,14 @@ const ModalAddDetail = ({ isOpen, onClose }: ModalAddDetailProps) => {
     const handleCloseModalSearchLocation = () => setIsModalSearchLocationOpen(false);
 
     const handleChangeDetailText = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setIsDetailText(e.target.value);
+        setDetailText(e.target.value);
+    };
+    const handleChangeDetailExpense = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setDetailExpense(e.target.value);
+    };
+
+    const handleConfirmCategory = (selectedCategory: string) => {
+        setSelectedCategory(selectedCategory);
     };
 
     const tabs = [
@@ -74,7 +83,7 @@ const ModalAddDetail = ({ isOpen, onClose }: ModalAddDetailProps) => {
                             <section>
                                 <div className="mb-8 px-5 ">
                                     <p className="ps-1 mb-2">내용</p>
-                                    <Input onChange={handleChangeDetailText} value={isDetailText} size="sm" />
+                                    <Input onChange={handleChangeDetailText} value={detailText} size="sm" />
                                 </div>
                                 <div className="mb-8 px-5 ">
                                     <p className="ps-1">시간</p>
@@ -97,11 +106,18 @@ const ModalAddDetail = ({ isOpen, onClose }: ModalAddDetailProps) => {
                                 <div className="mb-8 px-5 ">
                                     <p className="ps-1">카테고리</p>
                                     <div className="flex items-center mt-1">
-                                        <p className="ps-1 me-auto text-gray-400">{'category'}</p>
-                                        <ButtonDefault value="선택" size="sm" onClick={handleOpenModalSelectCategory} />
+                                        <p className="ps-1 me-auto text-gray-400">
+                                            {selectedCategory === '' ? '-' : selectedCategory}
+                                        </p>
+                                        <ButtonDefault
+                                            value={selectedCategory === '' ? '선택' : selectedCategory}
+                                            size="sm"
+                                            onClick={handleOpenModalSelectCategory}
+                                        />
                                         <ModalSelectCategory
                                             isOpen={isModalSelectCategoryOpen}
                                             onClose={handleCloseModalSelectCategory}
+                                            onConfirm={handleConfirmCategory}
                                         />
                                     </div>
                                 </div>
@@ -141,8 +157,8 @@ const ModalAddDetail = ({ isOpen, onClose }: ModalAddDetailProps) => {
                                 <div className="mb-8 px-5 ">
                                     <p className="ps-1 mb-2">비용</p>
                                     <Input
-                                        onChange={handleChangeDetailText}
-                                        value={isDetailText}
+                                        onChange={handleChangeDetailExpense}
+                                        value={detailExpense}
                                         size="sm"
                                         type="number"
                                         placeholder="비용을 입력해주세요"

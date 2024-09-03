@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ButtonFilter } from '../common/Button/';
 import { CheckBox, RangeSlider } from '../common/Input';
 import Radio from '../common/Input/Radio';
+import { formatNumber } from '@/utils/formatNumber';
 
 interface FilterOptionProps {
     label: string;
@@ -18,7 +19,6 @@ const ModalSearchFilter = () => {
     const [minDays, setMinDays] = useState(1);
     const [maxDays, setMaxDays] = useState(7);
     const [isOpen, setIsOpen] = useState(false);
-
     const toggleModal = () => {
         setIsOpen(!isOpen);
     };
@@ -41,10 +41,6 @@ const ModalSearchFilter = () => {
         setMaxValue(1000000);
         setMinDays(1);
         setMaxDays(7);
-    };
-
-    const formatNumber = (num: number) => {
-        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     };
 
     return (
@@ -73,8 +69,8 @@ const ModalSearchFilter = () => {
                             <div className="mb-8">
                                 <p className="font-semibold">일정 기간</p>
                                 <p className="text-primary-light font-medium mt-2">
-                                    {formatNumber(minDays)}일<span className="mx-1"> - </span>
-                                    {formatNumber(maxDays)}일
+                                    {minDays}일<span className="mx-1"> - </span>
+                                    {maxDays}일
                                 </p>
                                 <RangeSlider
                                     min={1}

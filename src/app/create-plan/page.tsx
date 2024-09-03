@@ -8,7 +8,7 @@ import ModalSetPeriod from '@/components/modal/ModalSetPeriod';
 import ModalSaveOrExit from '@/components/modal/ModalSaveOrExit';
 import ModalAddDetail from '@/components/modal/ModalAddDetail';
 
-const CreatePlan: React.FC = () => {
+const CreatePlan = () => {
     const [isModalSetPeriodOpen, setIsModalSetPeriodOpen] = useState(false);
     const [isModalSaveOrExitOpen, setIsModalSaveOrExitOpen] = useState(false);
     const [isModalAddDetailOpen, setIsModalAddDetailOpen] = useState(false);
