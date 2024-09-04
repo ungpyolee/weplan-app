@@ -78,10 +78,7 @@
 }
 
 body {
-    color: rgb(var(--foreground-rgb));
-    background: var(--background);
-
-    @apply max-w-[600px] mx-auto min-h-screen box-border relative outline outline-gray-100 dark:outline-gray-800;
+    @apply max-w-[600px] mx-auto min-h-screen box-border text-black dark:text-white relative outline bg-white dark:bg-black outline-gray-100 dark:outline-gray-800;
 }
 
 @layer utilities {

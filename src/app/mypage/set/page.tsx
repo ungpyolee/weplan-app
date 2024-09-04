@@ -17,7 +17,7 @@ const Set = () => {
                     <IconArrow className="w-4 h-4 dark:fill-white rotate-[-90deg]" />
                 </Link>
                 <div className="h-[1px] bg-gray-100 dark:bg-gray-800 my-1"></div>
-                <Link href="#" className="flex items-center justify-between px-5 py-3">
+                <Link href="/mypage/set/theme" className="flex items-center justify-between px-5 py-3">
                     <p className="ps-1">화면 테마</p>
                     <IconArrow className="w-4 h-4 dark:fill-white rotate-[-90deg]" />
                 </Link>
