@@ -7,7 +7,9 @@ const UserCard = () => {
         <div className="snap-start flex-shrink-0 w-80 rounded-xl border dark:border-gray-800 overflow-hidden">
             <div className="dark:bg-gray-900 p-5">
                 <div className="flex items-center">
-                    <div className="w-14 h-14 border dark:border-gray-400 rounded-full dark:bg-gray-700 me-4"></div>
+                    <div className="w-1/5 border dark:border-gray-400 rounded-lg dark:bg-gray-700 me-4 overflow-hidden">
+                        <div className="aspect-w-1 aspect-h-1"></div>
+                    </div>
                     <div className="text-start">
                         <p className="mb-0.5">{'유저닉네임'}</p>
                         <p className="text-sm">

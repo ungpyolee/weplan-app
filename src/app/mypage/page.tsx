@@ -1,7 +1,9 @@
 'use client';
+import Radio from '@/components/common/Input/Radio';
 import { TabMenuWide } from '@/components/common/TabMenu';
 import { NavBottom } from '@/components/layout';
 import MypageHeader from '@/components/mypage/MypageHeader';
+import ThemeSelector from '@/components/mypage/ThemeSelector';
 import React, { useState } from 'react';
 const Mypage = () => {
     const tabs = [
@@ -15,8 +17,8 @@ const Mypage = () => {
     return (
         <>
             <MypageHeader />
-            <div className="flex items-center px-5">
-                <div className="w-1/5 border dark:border-gray-400 rounded-xl dark:bg-gray-700 me-4 overflow-hidden">
+            <div className="flex items-center px-5 pt-5">
+                <div className="w-1/5 border dark:border-gray-400 rounded-xl bg-white dark:bg-gray-700 me-4 overflow-hidden">
                     <div className="aspect-w-1 aspect-h-1"></div>
                 </div>
                 <div className="text-start">
@@ -39,6 +41,7 @@ const Mypage = () => {
                 </p>
             </div>
             <TabMenuWide tabs={tabs} initialTabId={0} onTabChange={handleTabChange} />
+            <ThemeSelector />
             <NavBottom />
         </>
     );

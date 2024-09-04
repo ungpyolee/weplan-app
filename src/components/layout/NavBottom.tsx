@@ -23,7 +23,6 @@ const navItems = [
 ];
 
 const NavBottom = () => {
-    const router = useRouter();
     const pathname = usePathname();
 
     return (
