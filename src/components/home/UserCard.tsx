@@ -4,10 +4,10 @@ import { ButtonFollow } from '../common/Button';
 
 const UserCard = () => {
     return (
-        <div className="snap-start flex-shrink-0 w-80 rounded-xl border dark:border-gray-800 overflow-hidden">
+        <div className="snap-start flex-shrink-0 w-80 rounded-xl border dark:border-gray-900 overflow-hidden">
             <div className="dark:bg-gray-900 p-5">
                 <div className="flex items-center">
-                    <div className="w-1/5 border dark:border-gray-400 rounded-lg dark:bg-gray-700 me-4 overflow-hidden">
+                    <div className="w-1/5 border dark:border-gray-800 rounded-lg dark:bg-gray-900 me-4 overflow-hidden">
                         <div className="aspect-w-1 aspect-h-1"></div>
                     </div>
                     <div className="text-start">

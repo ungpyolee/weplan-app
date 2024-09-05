@@ -18,7 +18,7 @@ const Mypage = () => {
         <>
             <MypageHeader />
             <div className="flex items-center px-5 pt-5">
-                <div className="w-1/5 border dark:border-gray-400 rounded-xl bg-white dark:bg-gray-700 me-4 overflow-hidden">
+                <div className="w-1/5 border dark:border-gray-800 rounded-xl bg-white dark:bg-gray-900 me-4 overflow-hidden">
                     <div className="aspect-w-1 aspect-h-1"></div>
                 </div>
                 <div className="text-start">

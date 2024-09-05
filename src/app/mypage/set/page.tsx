@@ -8,7 +8,7 @@ const Set = () => {
         <div className="pt-15">
             <NavTopBack title="설정" />
             <div className="flex flex-col py-5">
-                <Link href="#" className="flex items-center justify-between px-5 py-3">
+                <Link href="/mypage/set/profile" className="flex items-center justify-between px-5 py-3">
                     <p className="ps-1">프로필 수정</p>
                     <IconArrow className="w-4 h-4 dark:fill-white rotate-[-90deg]" />
                 </Link>
