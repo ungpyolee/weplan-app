@@ -6,5 +6,16 @@ import { default as Submit } from './Submit';
 import { default as RangeSlider } from './RangeSlider';
 import { default as InputRadio } from './InputRadio';
 import { default as InputText } from './InputText';
+import { default as InputFileProfile } from './InputFileProfile';
 
-export { Input, InputSearch, CheckBox, Submit, RangeSlider, InputRadio, InputSearchLocation, InputText };
+export {
+    Input,
+    InputSearch,
+    CheckBox,
+    Submit,
+    RangeSlider,
+    InputRadio,
+    InputSearchLocation,
+    InputText,
+    InputFileProfile,
+};

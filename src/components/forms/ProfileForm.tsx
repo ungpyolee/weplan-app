@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { ButtonDefault } from '../common/Button';
-import { InputText } from '../common/Input';
+import { InputFileProfile, InputText } from '../common/Input';
 
 const ProfileForm = () => {
     return (
@@ -11,16 +11,16 @@ const ProfileForm = () => {
                     <div className="aspect-w-1 aspect-h-1"></div>
                 </div>
                 <div className="text-start me-auto">
-                    <p className="mb-0.5">{'프로필 사진'}</p>
+                    <p>프로필 사진</p>
                 </div>
-                <ButtonDefault value="사진 변경" size="sm" />
+                <InputFileProfile />
             </div>
-            <div className="flex-grow pt-10 flex flex-col justify-between">
-                <div className="space-y-10">
+            <div className="flex-grow pt-10 flex flex-col">
+                <div className="space-y-10 mb-5">
                     <InputText title="닉네임" placeholder={'유저닉네임'} />
                     <InputText title="소개글" />
                 </div>
-                <div className="px-5 flex flex-col">
+                <div className="px-5 flex flex-col mt-auto">
                     <ButtonDefault value="저장" color="primary" />
                 </div>
             </div>
