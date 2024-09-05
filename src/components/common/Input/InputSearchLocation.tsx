@@ -1,3 +1,4 @@
+'use client';
 import { IconSearchL } from '@/components/Icons';
 import React, { useState, useEffect } from 'react';
 
