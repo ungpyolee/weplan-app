@@ -41,7 +41,6 @@ const Mypage = () => {
                 </p>
             </div>
             <TabMenuWide tabs={tabs} initialTabId={0} onTabChange={handleTabChange} />
-            <ThemeSelector />
             <NavBottom />
         </>
     );

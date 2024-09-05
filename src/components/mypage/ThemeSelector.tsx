@@ -5,7 +5,7 @@ import Radio from '../common/Input/Radio';
 
 type Theme = 'system' | 'dark' | 'light';
 
-const ThemeSelector: React.FC = () => {
+const ThemeSelector = () => {
     const [currentTheme, setCurrentTheme] = useState<Theme>('system');
 
     useEffect(() => {
